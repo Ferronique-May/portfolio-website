@@ -42,14 +42,13 @@ p {
 
 nav{
     text-align: center;
-    padding: 6px;
+    padding: 5px;
     margin: 0;
     background: #f7f5f5;
 }
 nav ul{
     list-style: none;
-    margin-left: 70px;
-    margin-right: 70px;
+    margin-right: 50px;
 }
 
 nav a:hover{
@@ -61,7 +60,7 @@ nav a:hover{
 nav a{
     color: #333;
     text-decoration: none;
-    padding: 8px; 
+    padding: 8px;
 }
 
 @media(min-width: 700px){
