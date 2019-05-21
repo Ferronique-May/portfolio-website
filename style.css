@@ -72,6 +72,7 @@ nav a{
         display: inline-block;
         margin-left: 70px;
         margin-right: 70px;
+        margin-top: 10px;
     }
 
     nav a{
@@ -88,7 +89,7 @@ nav a{
 
 #showcase .bg-image{
     position: absolute;
-    background: #333 url(images/connection-contemporary-data-450035.jpg);
+    background: #333 url(images/connection-contemporary-data-450035.jpeg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -187,10 +188,6 @@ nav a{
         grid-template-columns: 1fr repeat(auto, minmax(25em));
     }
 
-    #showcase .content-wrap a{
-        display: none;
-    }
-
     #section-a .content-text {
         columns: 2;
         column-gap: 2em;
@@ -222,35 +219,7 @@ nav a{
 /*HOMEPAGE STYLING*/
 #home-section-a {
     background: #eaeaea;
-    color: #333;
     padding-bottom: 2em;
-    text-align: center;
-}
-#home-section-a .content-wrap {
-    padding: 1.5rem;
-}
-
-@media(max-width:700px){
-    #home-section-a{
-        display: none;
-
-    }
-}
-
-@media(min-width:700px) {
-    .grid{
-        display: grid;
-        grid-template-columns: 1fr repeat(auto, minmax(25em));
-    }
-
-    #home-section-a .content-text {
-        columns: 2;
-        column-gap: 2em;
-    }
-
-    #home-section-a .content-text p{
-        padding-top: 0;
-    }
 }
 
 /*TECH-STACK STYLING*/
@@ -340,7 +309,7 @@ nav a{
 }
 
 .carousel-item{
-    max-height: 500px;
+    max-height: 450px;
 }
 
 
