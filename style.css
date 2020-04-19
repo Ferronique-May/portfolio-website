@@ -129,7 +129,7 @@ footer{
   }
 
 }
-
+/* override input style */
 .w3-input {
   width: 60% !important;
   margin-left: 20%;
