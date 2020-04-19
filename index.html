@@ -1,95 +1,207 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
     <title>Ferronique</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ad30806014.js" crossorigin="anonymous"></script> 
+    <script src="https://code.iconify.design/1/1.0.5/iconify.min.js"></script> 
 </head>
 <body>
-<!--Navigation-->
-    <div class="navigation">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-            </ul>
-            <ul>
-                <li><a href="about-me.html">About Me</a></li>
-            </ul>
-            <ul>
-                <li><a href="projects.html">Projects</a></li>
-            </ul>
-            <ul>
-                <li><a href="tech-stack.html">Tech-Stack</a></li>
-            </ul>
-        </nav>
+  <!-- Navbar (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-bar w3-white w3-card" id="myNavbar">
+      <a href="#home" class="w3-bar-item w3-button w3-wide">FERRONIQUE</a>
+      <!-- Right-sided navbar links -->
+      <div class="w3-right w3-hide-small">
+        <a href="#about" class="w3-bar-item w3-button"></i>ABOUT</a>
+        <a href="#tech-stack" class="w3-bar-item w3-button">TECH-STACK</a>
+        <!-- <a href="#projects" class="w3-bar-item w3-button"></i> PROJECTS</a> -->
+        <a href="documents/Ferronique.pdf" class="w3-bar-item w3-button"></i> RESUME</a>
+        <a href="#contact" class="w3-bar-item w3-button">CONTACT</a>
+      </div>
+      <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+        onclick="w3_open()">
+        <i class="fa fa-bars"></i>
+      </a>
     </div>
-<!--Header Showcase-->
-<header id="showcase" class="grid">      
-    <div class="bg-image"></div>
-    <div class="content-wrap">
-     <h1>Welcome!</h1>
-        <p>This site was designed with the sole
-        purpose of demonstrating my skills and
-        giving you insight on my tech stack.</p>
-        <a href="about-me.html" class="btn">About me</a>
+  </div>
+
+  <!-- Sidebar on small screens when clicking the menu icon -->
+  <nav class="w3-sidebar w3-bar-block  w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none"
+    id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">X</a>
+    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+    <a href="#tech-stack" onclick="w3_close()" class="w3-bar-item w3-button">TECH-STACK</a>
+    <!-- <a href="#projects" onclick="w3_close()" class="w3-bar-item w3-button">PROJECTS</a> -->
+    <a href="documents/Ferronique.pdf" onclick="w3_close()" class="w3-bar-item w3-button">RESUME</a>
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+  </nav>
+
+  <!-- Header with full-height image -->
+  <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+    <div class="w3-display-left w3-text-white">
+      <span class="w3-jumbo">Hi! I am Ferronique.<br>I am a Full-stack Developer.</span><br>
     </div>
-</header>
-<!--Main section-->
-<main id="main">
-    <!--Section A-->
-    <section id="home-section-a" class="grid">
-        <div class="content-wrap">
+  </header>
+
+  <article>
+    <!-- About Section -->
+    <section class="w3-container" id="about">
+      <div class="w3-row-padding w3-center">
+        <h3 class="w3-center"><b>ABOUT</b></h3>
+        <div class="w3-third">
+          <i class="fas fa-pen-nib w3-margin-bottom w3-jumbo"></i>
+          <h3 class="w3-xxlarge"><b>I write.</b></h3>
         </div>
-    </section>
-    <!--Section B-->
-    <section id="section-b" class="grid">
-        <ul>
-            <li>
-                <div class="card">
-                    <img src="images/circuit-board.jpeg" alt="">
-                    <div class="card-content">
-                        <h3 class="card-title">Tech Stack</h3>
-                        <p>All you need to know know about what I know.</p>
-                    </div>
-                    <a href="tech-stack.html" class="btn">Read More</a>
-                </div>
-            </li>
-            <li>
-                    <div class="card">
-                        <img src="images/typing.jpeg" alt="">
-                        <div class="card-content">
-                            <h3 class="card-title">Projects</h3>
-                            <p>Take a look at a few of the projects I have completed.</p>
-                        </div>
-                        <a href="projects.html" class="btn">Check it out!</a>
-                    </div>
-                </li>
-        </ul>
+        <div class="w3-third">
+          <i class="fas fa-check w3-margin-bottom w3-jumbo"></i>
+          <h3 class="w3-xxlarge"><b>I solve.</b></h3>
+        </div>
+        <div class="w3-third">
+          <i class="fas fa-laptop-code w3-margin-bottom w3-jumbo"></i>
+          <h3 class="w3-xxlarge"><b>I code.</b></h3>
+        </div>
+          <p class="more-about w3-center w3-large">
+            As an innovative artist at heart, I plan to change the world with one smart application at a time.
+
+            Having spent years doing jobs that left me feeling stagnant, I realised how much I enjoy a challenge and how much the idea of continuous growth excites me. This is exactly what lead me to pursuing a career in tech. 
+
+            I specifically chose programming because I love creating things.  Whether it be a fantasy world on paper or an application that will make the life of someone that much better, I love being behind the creation .<br><br>
+
+            As a resilient and diligent individual, I want to continue growing in all aspects of my life.
+          </p>
     </section>
 
-    <!--Section C-->
-    <section id="section-c" class="grid">
-            <div class="box">
-                <h2 class="content-title">Contact Me!</h2>
-                <p>Email or call me if you liked my work!</p>
-                <p> <i class="fas fa-envelope"></i> Email: <strong>ferronique.may@umuzi.org</strong></p>
-                <p> <i class="fas fa-phone"></i> Call: <strong>(+27) 84 068 0560</strong></p>
-                <a href="https://linkedin.com/in/ferronique-may-503606165" class="linkedin" >
-                    <i class="fab fa-linkedin-in x4"></i>
-                </a>
-            </div>
-        </section>
+    <!-- Tech-Stack -->
+    <section class="w3-container" id="tech-stack">
+      <div class="w3-row-padding w3-center">
+        <h3 class="w3-center"><b>TECH-STACK</b></h3>
+        <div class="w3-quarter">
+          <span class="iconify w3-margin-bottom w3-jumbo" data-icon="logos:javascript" data-inline="false"></span>
+          <h3 class="w3-xxlarge"><b>JavaScript</b></h3>
+        </div>
+        <div class="w3-quarter">
+          <span class="iconify w3-margin-bottom w3-jumbo" data-icon="logos:nodejs-icon" data-inline="false"></span>
+          <h3 class="w3-xxlarge"><b>Node.js</b></h3>
+        </div>
+        <div class="w3-quarter">
+          <span class="iconify w3-margin-bottom w3-jumbo" data-icon="logos:react" data-inline="false"></span>
+          <h3 class="w3-xxlarge"><b>React</b></h3>
+        </div>
+        <div class="w3-quarter">
+          <span class="iconify  w3-margin-bottom w3-jumbo" data-icon="logos:angular-icon" data-inline="false"></span>
+          <h3 class="w3-xxlarge"><b>Angular</b></h3>
+        </div>
+        <div class="w3-quarter">
+          <span class="iconify w3-margin-bottom w3-jumbo" data-icon="logos:python" data-inline="false"></span>
+          <h3 class="w3-xxlarge"><b>Python</b></h3>
+        </div>
+        <div class="w3-quarter">
+          <span class="iconify w3-margin-bottom w3-jumbo" data-icon="logos:django" data-inline="false"></span>
+          <h3 class="w3-xxlarge"><b>Django</b></h3>
+        </div>
+        <div class="w3-quarter">
+          <span class="iconify w3-margin-bottom w3-jumbo" data-icon="logos:postgresql" data-inline="false"></span>
+          <h3 class="w3-xxlarge"><b>PostgreSQL</b></h3>
+        </div>
+        <div class="w3-quarter">
+          <span class="iconify w3-margin-bottom w3-jumbo" data-icon="logos:mysql" data-inline="false"></span>
+          <h3 class="w3-xxlarge"><b>MySQL</b></h3>
+        </div>
+        <div class="w3-quarter">
+          <span class="iconify w3-margin-bottom w3-jumbo" data-icon="logos:sqlite" data-inline="false"></span>
+          <h3 class="w3-xxlarge"><b>SQLite</b></h3>
+        </div>
+        <div class="w3-quarter">
+          <span class="iconify w3-margin-bottom w3-jumbo sql-server" data-icon="simple-icons:microsoftsqlserver" data-inline="false"></span>
+          <h3 class="w3-xxlarge"><b>SQL Server</b></h3>
+        </div>
+        <div class="w3-quarter">
+          <span class="iconify w3-margin-bottom w3-jumbo" data-icon="logos:c-sharp" data-inline="false"></span>
+          <h3 class="w3-xxlarge"><b>C#</b></h3>
+        </div>
+        <div class="w3-quarter">
+          <span class="iconify w3-margin-bottom w3-jumbo" data-icon="cib:dot-net" data-inline="false"></span>
+          <h3 class="w3-xxlarge"><b>.NET Core</b></h3>
+        </div>
+        <div class="w3-quarter">
+          <span class="iconify w3-margin-bottom w3-jumbo" data-icon="logos:java" data-inline="false"></span>
+          <h3 class="w3-xxlarge"><b>Java</b></h3>
+        </div>
+        <div class="w3-quarter">
+          <span class="iconify w3-margin-bottom w3-jumbo spring" data-icon="cib:spring" data-inline="false"></span>
+          <h3 class="w3-xxlarge"><b>Spring</b></h3>
+        </div>
+        <div class="w3-quarter">
+          <span class="iconify w3-margin-bottom w3-jumbo" data-icon="simple-icons:apachemaven" data-inline="false"></span>
+          <h3 class="w3-xxlarge"><b>Maven</b></h3>
+        </div>
+        <div class="w3-quarter">
+          <span class="iconify w3-margin-bottom w3-jumbo" data-icon="logos:npm" data-inline="false"></span>
+          <h3 class="w3-xxlarge"><b>NPM</b></h3>
+        </div>
+        <div class="w3-quarter">
+          <span class="iconify w3-margin-bottom w3-jumbo" data-icon="logos:git-icon" data-inline="false"></span>
+          <h3 class="w3-xxlarge"><b>Git</b></h3>
+        </div>
+        <div class="w3-quarter">
+          <span class="iconify w3-margin-bottom w3-jumbo" data-icon="logos:css-3" data-inline="false"></span>
+          <h3 class="w3-xxlarge"><b>CSS</b></h3>
+        </div>
+        <div class="w3-quarter">
+          <span class="iconify w3-margin-bottom w3-jumbo" data-icon="logos:html-5" data-inline="false"></span>
+          <h3 class="w3-xxlarge"><b>HTML</b></h3>
+        </div>
+        <div class="w3-quarter">
+          <h3 class="w3-xxlarge"><b>&lt;FTL&gt;</b></h3>
+          <h3 class="w3-xxlarge"><b>FreeMarker Templates</b></h3>
+        </div>
 
-</main>
-<!--Footer-->
-<footer id="main-footer" class="grid">
-    <div>Ferronique May 2019</div>
-    
-</footer>
+      </section>
+  
 
-    
+
+    <!-- Contact Section -->
+
+    <section class="w3-container"style="padding:50px 16px 50px 0" id="contact">
+      <h3 class="w3-center"><b>CONTACT</b></h3>
+      <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
+      <div style="margin-top:48px">
+  
+        <br>
+        <form action="https://formspree.io/xjveqpwp" method="POST">
+          <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+          <p><textarea class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></textarea></p>
+          <p>
+            <button class="w3-button" type="submit" id="send-message">
+              <i class="fa fa-paper-plane"></i> SEND MESSAGE
+            </button>
+          </p>
+        </form>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="w3-center w3-padding-64">
+      <p><i class="fa fa-map-marker fa-fw w3-xxlarge" id="location"></i> Johannesburg, South Africa</p>
+      <p><i class="fa fa-envelope fa-fw w3-xxlarge" id="mail"> </i> ferrymay07@gmail.com</p>
+      <div class="w3-xxlarge w3-section">
+        <a href="https://www.facebook.com/ferronique.may.1" target="_blank" class="connect"><i class="fa fa-facebook-official w3-hover-opacity" style="font-size: 40px"></i></a>
+        <a href="https://www.instagram.com/ferronique/" target="_blank" class="connect"><i class="fa fa-instagram w3-hover-opacity"   style="font-size: 40px"></i></a>
+          <a href="https://twitter.com/ferronique" target="_blank" class="connect"><i class="fa fa-twitter w3-hover-opacity"  style="font-size: 40px"></i></a>
+      </div>
+      <p>Ferronique 2020</p>
+    </footer>
+</article>
+  <script src="index.js"></script> 
 </body>
+
 </html>
